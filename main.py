@@ -5,19 +5,19 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 import os
 import threading
-from os import environ
 
-bot_token = environ.get("6749189026:AAFy2cnFDLMr_5LKPxyokd6larHh8tNWO08", "") 
-api_hash = environ.get("92dbe89d182f72f427972d8993850130", "") 
-api_id = environ.get("22665066", "")
+bot_token = "6749189026:AAFy2cnFDLMr_5LKPxyokd6larHh8tNWO08"  # أدخل توكن البوت هنا مباشرة
+api_hash = "8dd9fb5fa2782d91b9847ace66eb885a"  # أدخل api_hash هنا
+api_id = 29755247  # أدخل api_id هنا
+session_string = "AgFZ12oAYv_AV16aJr_ETYMYAy__6dCzuSWdXnFY2n1u4Zp5SBckDwI01zXn1F_yQpkmJM3nwGNuUMz8QBBS78GcYGnFnC5v_Cg0a6_vXxw6Xu8eeQGwc3YzmlxTyfva9JvBBleqTbMx1y6I00q9ii-ltmHd5OsUasF4KkXUuDNhqytIj6yqhYmy7wbY0vqkCPkiVay7GXgm2RvMjtGroTzxknta5Sv7kyfiaU-VYF4uGmCPH1hhr0e3YA_EGIUwqKGAEN1xtADYpYarEYZxRCGc_ub76u31toQWnFbbtjt7Qm-Gi_MJQqAKlaek7EC_1UXh4T2Cs2q43twHbxR_s7D8DpzOMAAAAAGzpydNAA"  # أدخل الجلسة الخاصة بك هنا
+
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
-ss = environ.get("AgFZ12oAYv_AV16aJr_ETYMYAy__6dCzuSWdXnFY2n1u4Zp5SBckDwI01zXn1F_yQpkmJM3nwGNuUMz8QBBS78GcYGnFnC5v_Cg0a6_vXxw6Xu8eeQGwc3YzmlxTyfva9JvBBleqTbMx1y6I00q9ii-ltmHd5OsUasF4KkXUuDNhqytIj6yqhYmy7wbY0vqkCPkiVay7GXgm2RvMjtGroTzxknta5Sv7kyfiaU-VYF4uGmCPH1hhr0e3YA_EGIUwqKGAEN1xtADYpYarEYZxRCGc_ub76u31toQWnFbbtjt7Qm-Gi_MJQqAKlaek7EC_1UXh4T2Cs2q43twHbxR_s7D8DpzOMAAAAAGzpydNAA", "")
-if ss is not None:
-    acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=ss)
-    acc.start()
-else:
-    acc = None
+# إعداد الجلسة باستخدام session_string المحددة
+acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=session_string)
+
+# بدء الجلسة
+acc.start()
 
 USAGE = """**FOR PUBLIC CHATS**
 
