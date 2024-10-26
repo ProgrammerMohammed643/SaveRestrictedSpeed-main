@@ -7,7 +7,7 @@ import os
 import threading
 from os import environ
 
-bot_token = environ.get("6749189026:AAFy2cnFDLMr_5LKPxyokd6larHh8tNWO08", "") 
+bot_token = environ.get("6749189026:AAFy2cnFDLMr_5LKPxyokd6larHh8tNWO08") 
 api_hash = environ.get("92dbe89d182f72f427972d8993850130", "") 
 api_id = environ.get("22665066", "")
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
